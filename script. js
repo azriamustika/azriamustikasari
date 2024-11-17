@@ -1,0 +1,17 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = [
+        { name: "Nasi Goreng", description: "Nasi goreng dengan telur dan ayam." },
+        { name: "Mie Ayam", description: "Mie dengan ayam suwir dan sayuran." },
+        { name: "Sate Ayam", description: "Tusuk sate ayam dengan bumbu kacang." },
+        { name: "Gado-Gado", description: "Sayuran dengan bumbu kacang dan telur." },
+        { name: "Rendang", description: "Daging sapi dimasak dengan rempah." }
+    ];
+
+    const menuList = document.getElementById('menu-list');
+    
+    menuItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${item.name}</strong><p>${item.description}</p>`;
+        menuList.appendChild(listItem);
+    });
+});
